@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="397.0" styleClass="button" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication23.UserController">
+   <children>
+      <TextField fx:id="IDUser" layoutX="169.0" layoutY="19.0" />
+      <TextField fx:id="FIO" layoutX="169.0" layoutY="54.0" />
+      <TextField fx:id="Number_Phone" layoutX="169.0" layoutY="88.0" />
+      <TextField fx:id="AutoID" layoutX="169.0" layoutY="127.0" />
+      <TextField fx:id="Price_repair" layoutX="169.0" layoutY="162.0" />
+      <Label layoutX="52.0" layoutY="25.0" prefHeight="26.0" prefWidth="89.0" text="IDUser" />
+      <Label layoutX="52.0" layoutY="60.0" prefHeight="26.0" prefWidth="62.0" text="FIO" />
+      <Label layoutX="52.0" layoutY="94.0" prefHeight="26.0" prefWidth="101.0" text="Number phone" />
+      <Label layoutX="52.0" layoutY="133.0" prefHeight="26.0" prefWidth="62.0" text="AutoID" />
+      <Label layoutX="52.0" layoutY="159.0" prefHeight="26.0" prefWidth="101.0" text="Price repair" />
+      <Button fx:id="Add" layoutX="59.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@newCascadeStyleSheet.css" text="Add" textFill="#da1212" />
+      <Button fx:id="Delete" layoutX="277.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@newCascadeStyleSheet.css" text="Delete" textFill="#bf0e0e" />
+      <Button fx:id="Out" layoutX="134.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@newCascadeStyleSheet.css" text="Output table" textFill="#d00b0b" />
+      <Button fx:id="Back" layoutX="29.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@newCascadeStyleSheet.css" text="Back" textFill="#e40a0a" />
+      <Button fx:id="Exit" layoutX="330.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@newCascadeStyleSheet.css" text="Exit" textFill="#eb0e0e" />
+      <TextArea fx:id="Ou" layoutX="16.0" layoutY="244.0" prefHeight="200.0" prefWidth="365.0" />
+   </children>
+</AnchorPane>
