@@ -101,9 +101,9 @@ public class RepairsController implements Initializable {
 
         //Кнопка Добавить(Активная) 
         if (event.getSource() == Add) {
-           String query = "insert into Repairs values(" + IDUser.getText() + "," + IDRep.getText() + "," + Quant.getText() + "," + Price.getText() + "," + MastersID.getText() + ",'" + Date.getText() + "')";
-     
-           executeQuery(query);
+            String query = "insert into Repairs values(" + IDUser.getText() + "," + IDRep.getText() + "," + Quant.getText() + "," + Price.getText() + "," + MastersID.getText() + ",'" + Date.getText() + "')";
+
+            executeQuery(query);
         }
         //Кнопка Вывести(Активная)
         if (event.getSource() == Out) {
@@ -112,22 +112,21 @@ public class RepairsController implements Initializable {
 //          String query ="SELECT * From Repairs RIGTH JOIN User USING(IDUSER)";
 //            executeQuery(query);  
             try {
-          //   String query ="SELECT * From Repairs RIGTH JOIN User USING(IDUSER)";
+                //   String query ="SELECT * From Repairs RIGTH JOIN User USING(IDUSER)";
                 Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil", "srv162551_danil", "2010danil");
                 Statement st = conn.createStatement();
-              ResultSet rs = st.executeQuery(query);
+                ResultSet rs = st.executeQuery(query);
 //                Statement stm = conn.createStatement();
 //                 String query = "SELECT Repairs.*, User.`IDUser` as `IDUser` FROM Repairs INNER JOIN User ON (Repairs.`IDUser`=User.`IDUser`)";
 //                ResultSet ts = stm.executeQuery(query);
 //                
-     
-           
-              while (rs.next()) {
+
+                while (rs.next()) {
 //"IDUser= " + rs.getString(2) +
-                   Ou.appendText("IDUser="+rs.getString(1)+", IDRep= " + rs.getString(2) + ", Quant= " + rs.getString(3) + ", Price= " + rs.getString(4) + ", MastersID= " + rs.getString(5) + ", Date= " + rs.getString(6) + "\n");
+                    Ou.appendText("IDUser=" + rs.getString(1) + ", IDRep= " + rs.getString(2) + ", Quant= " + rs.getString(3) + ", Price= " + rs.getString(4) + ", MastersID= " + rs.getString(5) + ", Date= " + rs.getString(6) + "\n");
                     Ou.setEditable(false);
                 }
-              
+
             } catch (SQLException sqlEx) {
                 sqlEx.printStackTrace();
             }

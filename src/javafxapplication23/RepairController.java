@@ -2,11 +2,11 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
-*/
-/* 
+ */
+ /* 
    
     Author     : karos
-*/
+ */
 package javafxapplication23;
 
 import java.io.IOException;
@@ -62,44 +62,29 @@ public class RepairController implements Initializable {
     private TextField Price_x;
     @FXML
     private TextArea Ou;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     // подключение
+
+    // подключение
     public void executeQuery(String query) {
-    	Connection conn = getConnection();
-    	Statement st;
-    	try {
-			st = conn.createStatement();
-			st.executeUpdate(query);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        Connection conn = getConnection();
+        Statement st;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-      public Connection getConnection() {
-    	Connection conn;
-    	try {
-    		conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil","srv162551_danil","2010danil");
-    		return conn;
-    	}
-    	catch (Exception e){
-    		e.printStackTrace();
-    		return null;
-    	}
+
+    public Connection getConnection() {
+        Connection conn;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil", "srv162551_danil", "2010danil");
+            return conn;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
-    
-    
-    
-    
 
     /**
      * Initializes the controller class.
@@ -107,70 +92,66 @@ public class RepairController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-      
-          //Кнопка Добавить(Активная) 
-     if (event.getSource()==A){
-       String query = "insert into Repair values("+IDRep.getText()+",'"+Name.getText()+"','"+Date_P.getText()+"',"+Quant.getText()+","+Price_x.getText()+")";
-       executeQuery(query);
-   } 
-     
-      //Кнопка Вывести(Активная)
-   if (event.getSource()==O){
-        Ou.setText(null);
-       String query = "SELECT * From Repair" ;
-    try{   Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil","srv162551_danil","2010danil");
-        Statement stmt = conn.createStatement();
-           ResultSet rs = stmt.executeQuery(query);
-      while (rs.next()) {
-                    
-                    Ou.appendText("IDRep= "+rs.getString(1)+", Name= "+rs.getString(2)+", Data= "+rs.getString(3)+", Quant= "+rs.getString(4)+", Price x1= "+rs.getString(5)+"\n");
+
+        //Кнопка Добавить(Активная) 
+        if (event.getSource() == A) {
+            String query = "insert into Repair values(" + IDRep.getText() + ",'" + Name.getText() + "','" + Date_P.getText() + "'," + Quant.getText() + "," + Price_x.getText() + ")";
+            executeQuery(query);
+        }
+
+        //Кнопка Вывести(Активная)
+        if (event.getSource() == O) {
+            Ou.setText(null);
+            String query = "SELECT * From Repair";
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil", "srv162551_danil", "2010danil");
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()) {
+
+                    Ou.appendText("IDRep= " + rs.getString(1) + ", Name= " + rs.getString(2) + ", Data= " + rs.getString(3) + ", Quant= " + rs.getString(4) + ", Price x1= " + rs.getString(5) + "\n");
                     Ou.setEditable(false);
                 }
-      
-    } 
-    catch (SQLException sqlEx) {
+
+            } catch (SQLException sqlEx) {
                 sqlEx.printStackTrace();
-            } 
             }
-     
-     
-     
-     //Кнопка Удалить (Активная)
-   if (event.getSource()==D){
-      String query = "DELETE FROM Repair WHERE IDRep="+IDRep.getText()+"";
-    	executeQuery(query);
-   }
-        
-      
-       //Кнопка Back 
-        if (event.getSource()==B){
-         try {
-           Stage stage = (Stage) B.getScene().getWindow();
-             stage.close();
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-        //     Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-    } 
+        }
+
+        //Кнопка Удалить (Активная)
+        if (event.getSource() == D) {
+            String query = "DELETE FROM Repair WHERE IDRep=" + IDRep.getText() + "";
+            executeQuery(query);
+        }
+
+        //Кнопка Back 
+        if (event.getSource() == B) {
+            try {
+                Stage stage = (Stage) B.getScene().getWindow();
+                stage.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                //     Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("ABC");
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
         //Кнопка Exit
-if (event.getSource()==E){
-        
-                         Platform.exit();
-        
-        
-    }  
+        if (event.getSource() == E) {
+
+            Platform.exit();
+
+        }
     }
-    
+
 }

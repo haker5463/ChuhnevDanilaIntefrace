@@ -2,11 +2,11 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
-*/
-/* 
+ */
+ /* 
     
     Author     : karos
-*/
+ */
 package javafxapplication23;
 
 import java.io.IOException;
@@ -52,92 +52,92 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-   //кнопки перехода по таблицам
-        if (event.getSource()==one){
-         try {
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Repairs.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-             Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-    }
-       if (event.getSource()==two){
+        //кнопки перехода по таблицам
+        if (event.getSource() == one) {
             try {
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Masters.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-             Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-    }
-          if (event.getSource()==three){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Repairs.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("ABC");
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        if (event.getSource() == two) {
             try {
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Repair.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-             Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-    }
-             if (event.getSource()==four){
-        try {
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("User.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-             Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-    }
-    
-                 if (event.getSource()==five){
-        try {
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Auto.fxml"));
-             Parent root1 = (Parent) fxmlLoader.load();
-             Stage stage = new Stage();
-             stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
-             stage.setTitle("ABC");
-             stage.setScene(new Scene(root1));
-             stage.show();
-         } catch (IOException ex) {
-             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-    }
-    //Кнопка выходи из окна Menu
-           if (event.getSource()==six){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Masters.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("ABC");
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        if (event.getSource() == three) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Repair.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("ABC");
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        if (event.getSource() == four) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("User.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("ABC");
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+
+        if (event.getSource() == five) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Auto.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setTitle("ABC");
+                stage.setScene(new Scene(root1));
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        //Кнопка выходи из окна Menu
+        if (event.getSource() == six) {
             Platform.exit();
-        
+
+        }
     }
-    }
-    
+
 }
