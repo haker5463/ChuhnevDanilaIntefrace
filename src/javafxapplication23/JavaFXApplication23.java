@@ -37,6 +37,10 @@ public class JavaFXApplication23 extends Application {
     }
 
 public static void main(String[] args) {
+    /*
+   Запрос созданный дня привильного вывода связанных таблиц находиться в UserController.java (Вместо поля AutoID выводиться Model автомобиля.
+   css файл я подключал непосредственно к каждому fxml файлу с помощью SceneBuilder , сам ксс файл находиться в пакете JavaFXApplication23
+    */
         launch(args);
     }
     
