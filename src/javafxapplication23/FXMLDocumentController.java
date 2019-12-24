@@ -157,6 +157,7 @@ if (event.getSource()==Ex){
    } 
      // кнопка Output(Активная)
         if (event.getSource()==Out){
+            Ou.setText(null);
        String query = "SELECT * From Masters" ;
     try{   Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil","srv162551_danil","2010danil");
         Statement stmt = conn.createStatement();

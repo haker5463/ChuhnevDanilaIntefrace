@@ -120,6 +120,7 @@ public class RepairController implements Initializable {
      
       //Кнопка Вывести(Активная)
    if (event.getSource()==O){
+        Ou.setText(null);
        String query = "SELECT * From Repair" ;
     try{   Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil","srv162551_danil","2010danil");
         Statement stmt = conn.createStatement();

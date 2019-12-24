@@ -127,13 +127,28 @@ public class UserController implements Initializable {
    } 
       //Кнопка Вывести(Активная)
    if (event.getSource()==Out){
-       String query = "SELECT * From User" ;
+        Ou.setText(null);
+//       String query = "SELECT * From User" ;
+//    try{   Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil","srv162551_danil","2010danil");
+//        Statement stmt = conn.createStatement();
+//           ResultSet rs = stmt.executeQuery(query);
+//      while (rs.next()) {
+//                    
+//                    Ou.appendText("IDUser= "+rs.getString(1)+", FIO= "+rs.getString(2)+", Nember Phone= "+rs.getString(3)+", AutoID= "+rs.getString(4)+", Price repair= "+rs.getString(5)+"\n");
+//                    Ou.setEditable(false);
+//                }
+//      
+//    } 
+//    catch (SQLException sqlEx) {
+//                sqlEx.printStackTrace();
+//            } 
+       String query = "SELECT User.IDUSER,User.fiop,User.Number_Phone, Auto.`Model` as `AutoID`, User.price_repair FROM User INNER JOIN Auto ON (User.`AutoID`= Auto.`AutoID`)" ;
     try{   Connection conn = DriverManager.getConnection("jdbc:mysql://mysql-162551.srv.hoster.ru/srv162551_db_danil","srv162551_danil","2010danil");
         Statement stmt = conn.createStatement();
            ResultSet rs = stmt.executeQuery(query);
       while (rs.next()) {
                     
-                    Ou.appendText("IDUser= "+rs.getString(1)+", FIO= "+rs.getString(2)+", Nember Phone= "+rs.getString(3)+", AutoID= "+rs.getString(4)+", Price repair= "+rs.getString(5)+"\n");
+                    Ou.appendText("IDUser= "+rs.getString(1)+", FIO= "+rs.getString(2)+", Number Phone= "+rs.getString(3)+", AutoID= "+rs.getString(4)+", Price repair= "+rs.getString(5)+"\n");
                     Ou.setEditable(false);
                 }
       
