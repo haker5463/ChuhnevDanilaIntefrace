@@ -127,7 +127,7 @@ public class AutoController implements Initializable {
                 ResultSet rs = stmt.executeQuery(query);
                 while (rs.next()) {
 
-                    Ou.appendText("AutoID= " + rs.getString(1) + ", Model= " + rs.getString(2) + ", Year= " + rs.getString(3) + ", Volume= " + rs.getString(4) + ", pNumber= " + rs.getString(5) + "\n");
+                    Ou.appendText("AutoID= " + rs.getString(1) + "| Model= " + rs.getString(2) + "| Year= " + rs.getString(3) + "| Volume= " + rs.getString(4) + "| pNumber= " + rs.getString(5) + "\n");
                     Ou.setEditable(false);
                 }
 
