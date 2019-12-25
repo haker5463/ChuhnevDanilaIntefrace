@@ -123,7 +123,7 @@ public class RepairsController implements Initializable {
 
                 while (rs.next()) {
 //"IDUser= " + rs.getString(2) +
-                    Ou.appendText("IDUser=" + rs.getString(1) + "| IDRep= " + rs.getString(2) + "| Quant= " + rs.getString(3) + "| Price= " + rs.getString(4) + "| MastersID= " + rs.getString(5) + "| Date= " + rs.getString(6) + "\n");
+                    Ou.appendText("IDUser=" + rs.getString(1) + " | IDRep= " + rs.getString(2) + " | Quant= " + rs.getString(3) + " | Price= " + rs.getString(4) + " | MastersID= " + rs.getString(5) + " | Date= " + rs.getString(6) + "\n");
                     Ou.setEditable(false);
                 }
 

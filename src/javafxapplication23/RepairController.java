@@ -113,7 +113,7 @@ public class RepairController implements Initializable {
                 ResultSet rs = stmt.executeQuery(query);
                 while (rs.next()) {
 
-                    Ou.appendText("IDRep= " + rs.getString(1) + "| Name= " + rs.getString(2) + "| Data= " + rs.getString(3) + "| Quant= " + rs.getString(4) + "| Price x1= " + rs.getString(5) + "\n");
+                    Ou.appendText("IDRep= " + rs.getString(1) + " | Name= " + rs.getString(2) + " | Data= " + rs.getString(3) + " | Quant= " + rs.getString(4) + " | Price x1= " + rs.getString(5) + "\n");
                     Ou.setEditable(false);
                 }
 

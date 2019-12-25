@@ -114,7 +114,7 @@ public class UserController implements Initializable {
                 ResultSet rs = stmt.executeQuery(query);
                 while (rs.next()) {
 
-                    Ou.appendText("IDUser= " + rs.getString(1) + "| FIO= " + rs.getString(2) + "| Number Phone= " + rs.getString(3) + "| AutoID= " + rs.getString(4) + "| Price repair= " + rs.getString(5) + "\n");
+                    Ou.appendText("IDUser= " + rs.getString(1) + " | FIO= " + rs.getString(2) + " | Number Phone= " + rs.getString(3) + " | AutoID= " + rs.getString(4) + " | Price repair= " + rs.getString(5) + "\n");
                     Ou.setEditable(false);
                 }
 

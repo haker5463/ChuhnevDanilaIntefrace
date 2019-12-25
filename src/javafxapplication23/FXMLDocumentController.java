@@ -151,7 +151,7 @@ public class FXMLDocumentController implements Initializable {
                 ResultSet rs = stmt.executeQuery(query);
                 while (rs.next()) {
 
-                    Ou.appendText("MastersID= " + rs.getString(1) + "| FIO= " + rs.getString(2) + "| Specif= " + rs.getString(3) + "| Money= " + rs.getString(4) + "| Address= " + rs.getString(5) + "| Year Job " + rs.getString(6) + "| Number Phone " + rs.getString(7) + "\n");
+                    Ou.appendText("MastersID= " + rs.getString(1) + " | FIO= " + rs.getString(2) + " | Specif= " + rs.getString(3) + " | Money= " + rs.getString(4) + " | Address= " + rs.getString(5) + " | Year Job " + rs.getString(6) + " | Number Phone " + rs.getString(7) + "\n");
                     Ou.setEditable(false);
                 }
 
